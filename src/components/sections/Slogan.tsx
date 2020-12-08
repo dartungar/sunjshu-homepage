@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 
-const SloganSection = styled.section``;
+const SloganSection = styled.section`
+text-align: center;
+font-size: 1.25rem;
+`;
 
 export const Slogan: React.FC = () => {
     return (
