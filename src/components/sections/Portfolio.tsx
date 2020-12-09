@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Story } from "../stories/Story";
 import { storiesData } from "../../stories_data/storiesData";
@@ -15,7 +15,7 @@ const StoriesContainer = styled.div`
 
 export const Portfolio: React.FC = () => {
   return (
-    <PortfolioContainer>
+    <PortfolioContainer id="photo">
       <h2>Новые истории</h2>
       <StoriesContainer>
         {storiesData &&

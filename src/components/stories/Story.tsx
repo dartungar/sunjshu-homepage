@@ -45,15 +45,12 @@ interface Props {
 
 export const Story = (props: Props) => {
   const [showStory, setShowStory] = useState<boolean>(false);
-  const [storyDetailsYPosition, setStoryDetailsYPosition] = useState<
-    number | null
-  >(null);
+
   const {
     story: { title, description, thumbnailImagePath },
   } = props;
 
   const handleClick = (): void => {
-    setStoryDetailsYPosition(window.scrollY);
     setShowStory(true);
   };
 
@@ -67,11 +64,7 @@ export const Story = (props: Props) => {
         </InfoContainer>
       </StoryThumbnailContainer>
       {showStory && (
-        <StoryDetails
-          story={props.story}
-          setShowStory={setShowStory}
-          scrollY={storyDetailsYPosition}
-        />
+        <StoryDetails story={props.story} setShowStory={setShowStory} />
       )}
     </>
   );

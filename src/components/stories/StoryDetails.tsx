@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
+import styled, { keyframes } from "styled-components";
 import { storyData } from "../../stories_data/storiesData";
 
 const DarkenedBackgroundOverlay = styled.div`
@@ -16,11 +16,23 @@ const DarkenedBackgroundOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
+const fadein = keyframes`
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+`;
+
 const StoryPage = styled.div`
   position: relative;
+  z-index: 400;
   background-color: white;
   padding: 0 2rem 2rem;
   overflow-y: scroll;
+  animation: ${fadein} 0.1s linear;
 `;
 
 const TitleContainer = styled.div`
@@ -44,6 +56,9 @@ const TitleContainer = styled.div`
     font-weight: 600;
     font-size: 125%;
     cursor: pointer;
+    :hover {
+      color: #d1b933;
+    }
   }
 `;
 
@@ -57,7 +72,6 @@ const ImageContainer = styled.div`
 interface Props {
   story: storyData;
   setShowStory: (val: boolean) => void;
-  scrollY: number | null;
 }
 
 export const StoryDetails = (props: Props) => {
@@ -66,9 +80,13 @@ export const StoryDetails = (props: Props) => {
     setShowStory,
   } = props;
 
+  const stopPropagatingClickOnStoryPage = (e: React.SyntheticEvent): void => {
+    e.stopPropagation();
+  };
+
   return (
-    <DarkenedBackgroundOverlay>
-      <StoryPage>
+    <DarkenedBackgroundOverlay onClick={() => setShowStory(false)}>
+      <StoryPage onClick={(e) => stopPropagatingClickOnStoryPage(e)}>
         <TitleContainer>
           <h3>{title}</h3>
           <span onClick={() => setShowStory(false)}>X</span>
