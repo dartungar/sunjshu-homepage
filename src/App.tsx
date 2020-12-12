@@ -13,8 +13,6 @@ import { Contacts } from "./components/sections/Contacts";
 const AppContainer = styled.div`
   position: relative;
   section {
-    padding: 6rem 0;
-
     h2 {
       text-align: center;
     }
@@ -24,8 +22,8 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer className="app">
-      <div></div>
       <Navbar />
+
       <Hero />
       <Slogan />
       <About />
@@ -33,7 +31,6 @@ function App() {
       <Services />
       <Prices />
       <Contacts />
-      <div></div>
     </AppContainer>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { storyData } from "../../stories_data/storiesData";
+import { fadein } from "../../style/animations";
 
 const DarkenedBackgroundOverlay = styled.div`
   position: fixed;
@@ -16,19 +17,10 @@ const DarkenedBackgroundOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-const fadein = keyframes`
-  from {
-    opacity: 0
-  }
-
-  to {
-    opacity: 1
-  }
-`;
-
 const StoryPage = styled.div`
   position: relative;
   z-index: 400;
+  max-width: 30rem;
   background-color: white;
   padding: 0 2rem 2rem;
   overflow-y: scroll;
@@ -57,7 +49,7 @@ const TitleContainer = styled.div`
     font-size: 125%;
     cursor: pointer;
     :hover {
-      color: #d1b933;
+      color: #99957d;
     }
   }
 `;

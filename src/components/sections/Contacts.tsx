@@ -1,12 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { SocialLinks } from "../elements/SocialLinks";
 
-const ContactsContainer = styled.section``;
+const ContactsContainer = styled.div`
+  div {
+    margin-left: 0.6rem;
+  }
+`;
 
 export const Contacts: React.FC = () => {
   return (
-    <ContactsContainer id="contacts">
-      <h2>Контакты</h2>
-    </ContactsContainer>
+    <section>
+      <ContactsContainer id="contacts">
+        <h2>Контакты</h2>
+        <p>Свяжитесь со мной в соцсетях или telegram:</p>
+        <SocialLinks />
+      </ContactsContainer>
+    </section>
   );
 };

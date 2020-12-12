@@ -21,17 +21,38 @@ h6 {
 }
 
 .app {
-  display: grid;
-  grid-template-columns: 1fr min(100ch, 90%) 1fr;
   height: 100%;
   width: 100%;
 }
 
 section {
-  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.full-bleed {
-  width: 100%;
-  grid-column: 1 / -1;
+section div {
+  display: inline-block;
+  max-width: 100ch;
+  padding: 10rem 2rem;
+}
+
+section div div {
+  max-width: initial;
+  padding: initial;
+}
+
+section:nth-child(even) {
+  background-color: rgb(245, 243, 238);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.1s linear;
+}
+
+a :hover {
+  color: rgb(245, 243, 238);
+  transition: color 0.1s linear;
 }
