@@ -87,6 +87,23 @@ export const Prices: React.FC = () => {
               <td>1800 ₽ / ч</td>
             </tr>
           </table>
+          <table>
+            <tr>
+              <td>
+                Визуальное оформление вашего Instagram (12 постов с вашим
+                контентом)
+              </td>
+              <td>3000 ₽</td>
+            </tr>
+            <tr>
+              <td>Съемка контента (1 час, без обработки) </td>
+              <td>2000 ₽</td>
+            </tr>
+            <tr>
+              <td>Съемка контента (1 час, 30 фотографий с обработкой) </td>
+              <td>3000 ₽</td>
+            </tr>
+          </table>
         </TableContainer>
       </PricesContainer>
     </section>

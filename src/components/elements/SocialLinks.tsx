@@ -18,20 +18,30 @@ const SocialLinksContainer = styled.div`
 export const SocialLinks: React.FC = () => {
   return (
     <SocialLinksContainer>
+      <a href="tel:+79169674807" title="Позвонить">
+        <i className="fas fa-phone"></i>
+      </a>
       <a
         href="https://www.instagram.com/sunjshu"
         target="_blank"
         rel="noopener noreferrer"
+        title="Посмотреть или написать в Instagram"
       >
         <i className="fab fa-instagram"></i>
       </a>
-      <a href="https://t.me/sunjshu" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://t.me/sunjshu"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Написать в Telegram"
+      >
         <i className="fab fa-telegram-plane"></i>
       </a>
       <a
         href="https://vk.com/sunjshu"
         target="_blank"
         rel="noopener noreferrer"
+        title="Написать Вконтакте"
       >
         <i className="fab fa-vk"></i>
       </a>
