@@ -5,9 +5,10 @@ import { storyData } from "../../stories_data/storiesData";
 
 const StoryThumbnailContainer = styled.div`
   position: relative;
-  margin-top: 0.3rem;
+  margin-top: 0.65rem;
   width: 300px;
   overflow: hidden;
+  cursor: pointer;
   img {
     max-width: 100%;
     transition: transform 0.2s ease-in-out, filter 0.2s linear;

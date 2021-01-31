@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const HeroContainer = styled.div`
   position: relative;
-  top: -100px;
+  /* top: -100px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,10 +36,10 @@ const HeroContent = styled.div`
 export const Hero: React.FC = () => {
   return (
     <HeroContainer className="full-bleed">
-      <Img title="Sunjshu" alt="Sunjshu Photography" src="hero.jpg" />
+      <Img title="Sunjshu" alt="Sunjshu Photography" src="/images/hero.jpg" />
       <HeroContent>
         <h1>
-          sunjshu <span>photography</span>{" "}
+          sunjshu <span>photography</span>
         </h1>
       </HeroContent>
     </HeroContainer>

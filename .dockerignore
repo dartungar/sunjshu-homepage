@@ -1,0 +1,7 @@
+/.vscode
+/node_modules
+/build
+.eslintcache
+debug.log
+img_resizer_renamer.py
+tsconfig.json

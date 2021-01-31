@@ -12,8 +12,7 @@ const StoriesContainer = styled.div`
   flex-wrap: wrap;
   margin-top: 8rem;
 `;
-
-export const Portfolio: React.FC = () => {
+const Portfolio: React.FC = () => {
   return (
     <section>
       <PortfolioContainer id="photo">
@@ -28,3 +27,5 @@ export const Portfolio: React.FC = () => {
     </section>
   );
 };
+
+export default Portfolio;

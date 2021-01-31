@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SloganSection = styled.div`
   text-align: center;
   font-size: 1.25rem;
-  margin: -2rem 0 6rem 0;
+  /* margin: -4rem 0 4rem 0; */
 
   svg {
     margin-bottom: 4rem;
