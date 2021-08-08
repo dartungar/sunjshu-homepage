@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { StoryDetails } from "./StoryDetails";
-import { storyData } from "../../stories_data/storiesData";
+import { storyData, storiesData } from "../../stories_data/storiesData";
+import { Link } from "react-router-dom";
 
 const StoryThumbnailContainer = styled.div`
   position: relative;
@@ -41,32 +41,22 @@ const InfoContainer = styled.div`
 `;
 
 interface Props {
-  story: storyData;
+  storyId: number;
 }
 
-export const Story = (props: Props) => {
-  const [showStory, setShowStory] = useState<boolean>(false);
-
-  const {
-    story: { title, description, thumbnailImagePath },
-  } = props;
-
-  const handleClick = (): void => {
-    setShowStory(true);
-  };
+export const StoryThumbnail = (props: Props) => {
+  // get story title & description
+  const story: storyData = storiesData.filter((s) => s.id === props.storyId)[0];
 
   return (
-    <>
-      <StoryThumbnailContainer onClick={handleClick}>
-        <img src={thumbnailImagePath} alt={title} />
+    <Link to={`/stories/${props.storyId}`}>
+      <StoryThumbnailContainer>
+        <img src={story.thumbnailImagePath} alt={story.title} />
         <InfoContainer className="info-container">
-          <h4>{title}</h4>
-          <p>{description}</p>
+          <h4>{story.title}</h4>
+          <p>{story.description}</p>
         </InfoContainer>
       </StoryThumbnailContainer>
-      {showStory && (
-        <StoryDetails story={props.story} setShowStory={setShowStory} />
-      )}
-    </>
+    </Link>
   );
 };

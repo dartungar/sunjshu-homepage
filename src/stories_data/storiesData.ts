@@ -1,4 +1,5 @@
 export interface storyData {
+  id: number;
   title: string;
   description?: string;
   thumbnailImagePath: string;
@@ -12,6 +13,7 @@ export interface imageData {
 
 export const storiesData: storyData[] = [
   {
+    id: 1,
     title: "Дарья и Борис",
     thumbnailImagePath: "/images/stories/Дарья_и_Борис/Обложка.jpg",
     description: "",
@@ -95,6 +97,7 @@ export const storiesData: storyData[] = [
     ],
   },
   {
+    id: 2,
     title: "Полина",
     thumbnailImagePath: "/images/stories/Полина/Обложка.jpg",
     description: "",
@@ -132,6 +135,7 @@ export const storiesData: storyData[] = [
     ],
   },
   {
+    id: 3,
     title: "Дарья и Роман",
     thumbnailImagePath: "/images/stories/Дарья_и_Роман/Обложка.jpg",
     description: "",
@@ -211,6 +215,7 @@ export const storiesData: storyData[] = [
     ],
   },
   {
+    id: 4,
     title: "Екатерина",
     thumbnailImagePath: "/images/stories/Екатерина/Обложка.jpg",
     description: "",
@@ -286,78 +291,67 @@ export const storiesData: storyData[] = [
     ],
   },
   {
+    id: 5,
     title: "Александр и Александра",
     thumbnailImagePath: "/images/stories/Александр_и_Александра/Обложка.jpg",
     description: "",
     images: [
       {
         title: "Александр_и_Александра_1",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_1.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_1.jpg",
       },
       {
         title: "Александр_и_Александра_10",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_10.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_10.jpg",
       },
       {
         title: "Александр_и_Александра_11",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_11.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_11.jpg",
       },
       {
         title: "Александр_и_Александра_12",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_12.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_12.jpg",
       },
       {
         title: "Александр_и_Александра_13",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_13.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_13.jpg",
       },
       {
         title: "Александр_и_Александра_2",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_2.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_2.jpg",
       },
       {
         title: "Александр_и_Александра_3",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_3.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_3.jpg",
       },
       {
         title: "Александр_и_Александра_4",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_4.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_4.jpg",
       },
       {
         title: "Александр_и_Александра_5",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_5.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_5.jpg",
       },
       {
         title: "Александр_и_Александра_6",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_6.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_6.jpg",
       },
       {
         title: "Александр_и_Александра_7",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_7.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_7.jpg",
       },
       {
         title: "Александр_и_Александра_8",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_8.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_8.jpg",
       },
       {
         title: "Александр_и_Александра_9",
-        path:
-          "/images/stories/Александр_и_Александра/Александр_и_Александра_9.jpg",
+        path: "/images/stories/Александр_и_Александра/Александр_и_Александра_9.jpg",
       },
     ],
   },
   {
+    id: 6,
     title: "Елизавета и Чизу",
     thumbnailImagePath: "/images/stories/Елизавета_и_Чизу/Обложка.jpg",
     description: "",
@@ -441,6 +435,7 @@ export const storiesData: storyData[] = [
     ],
   },
   {
+    id: 7,
     title: "Андрей и Елизавета",
     thumbnailImagePath: "/images/stories/Андрей_и_Елизавета/Обложка.jpg",
     description: "",
@@ -513,6 +508,7 @@ export const storiesData: storyData[] = [
   },
 
   {
+    id: 8,
     title: "Станислав",
     thumbnailImagePath: "/images/stories/Станислав/Обложка.jpg",
     description: "",
@@ -573,6 +569,7 @@ export const storiesData: storyData[] = [
   },
 
   {
+    id: 9,
     title: "Ксения и Михаил",
     thumbnailImagePath: "/images/stories/Ксения_и_Михаил/Обложка.jpg",
     description: "",

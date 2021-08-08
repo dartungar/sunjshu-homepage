@@ -1,6 +1,7 @@
 import React from "react";
+import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
-import { storyData } from "../../stories_data/storiesData";
+import { storyData, storiesData } from "../../stories_data/storiesData";
 import { fadein } from "../../style/animations";
 
 const DarkenedBackgroundOverlay = styled.div`
@@ -43,6 +44,7 @@ const TitleContainer = styled.div`
     align-self: center;
   }
 
+  /* pseudo-link */
   span {
     display: inline-block;
     font-weight: 600;
@@ -61,37 +63,41 @@ const ImageContainer = styled.div`
   margin: 1rem 0;
 `;
 
-interface Props {
-  story: storyData;
-  setShowStory: (val: boolean) => void;
-}
-
-export const StoryDetails = (props: Props) => {
-  const {
-    story: { title, description, images },
-    setShowStory,
-  } = props;
+export const StoryDetails = () => {
+  const history = useHistory();
+  let { id } = useParams<{ id: string | undefined }>();
+  let storyId: number = parseInt(id as string);
+  let story: storyData = storiesData.filter((s) => s.id === storyId)[0];
 
   const stopPropagatingClickOnStoryPage = (e: React.SyntheticEvent): void => {
     e.stopPropagation();
   };
 
-  return (
-    <DarkenedBackgroundOverlay onClick={() => setShowStory(false)}>
-      <StoryPage onClick={(e) => stopPropagatingClickOnStoryPage(e)}>
-        <TitleContainer>
-          <h3>{title}</h3>
-          <span onClick={() => setShowStory(false)}>X</span>
-        </TitleContainer>
+  const goBack = (e: React.SyntheticEvent) => {
+    e.stopPropagation();
+    history.goBack();
+  };
 
-        <p>{description}</p>
-        {images &&
-          images.map((i: any, index) => (
-            <ImageContainer>
-              <img src={i.path} alt={i.title} key={index} />
-            </ImageContainer>
-          ))}
-      </StoryPage>
-    </DarkenedBackgroundOverlay>
+  return (
+    <>
+      {story && (
+        <DarkenedBackgroundOverlay onClick={goBack}>
+          <StoryPage onClick={(e) => stopPropagatingClickOnStoryPage(e)}>
+            <TitleContainer>
+              <h3>{story.title}</h3>
+              <span onClick={goBack}>X</span>
+            </TitleContainer>
+
+            <p>{story.description}</p>
+            {story.images &&
+              story.images.map((i: any, index) => (
+                <ImageContainer>
+                  <img src={i.path} alt={i.title} key={index} />
+                </ImageContainer>
+              ))}
+          </StoryPage>
+        </DarkenedBackgroundOverlay>
+      )}
+    </>
   );
 };
