@@ -13,7 +13,7 @@ export const Contacts: React.FC = () => {
     <section>
       <ContactsContainer id="contacts">
         <h2>Контакты</h2>
-        <p>Свяжитесь со мной в соцсетях или telegram:</p>
+        <p>Свяжитесь со мной по телефону, в соцсетях или telegram:</p>
         <SocialLinks />
       </ContactsContainer>
     </section>

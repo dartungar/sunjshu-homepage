@@ -22,14 +22,6 @@ export const SocialLinks: React.FC = () => {
         <i className="fas fa-phone"></i>
       </a>
       <a
-        href="https://www.instagram.com/sunjshu"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Посмотреть или написать в Instagram"
-      >
-        <i className="fab fa-instagram"></i>
-      </a>
-      <a
         href="https://t.me/sunjshu"
         target="_blank"
         rel="noopener noreferrer"
